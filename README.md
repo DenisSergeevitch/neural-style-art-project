@@ -9,6 +9,7 @@ Once that is done, you can check out this project, go to the terraform directory
 	# EC2 Variables
 	access_key = "XXXXXX"
 	secret_key = "XXXXXX"
+	aws_key_name = "XXXXXX"
 
 Where you will replace the XXXXXX with the correct values for your account.
 
