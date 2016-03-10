@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <title>WebSocket Example</title>
+    </head>
+    <body>
+        <script src="js/react-0.14.7.js"
+        integrity="sha384-xQae1pUPdAKUe0u0KUTNt09zzdwheX4VSUsV8vatqM+t6X7rta01qOzessL808ox"
+        crossorigin="anonymous"></script>
+<script src="js/react-dom-0.14.7.js"
+        integrity="sha384-A1t0GCrR06cTHvMjaxeSE8XOiz6j7NvWdmxhN/9z748wEvJTVk13Rr8gMzTUnd8G"
+        crossorigin="anonymous"></script>
+
+        <pre id="fileData"></pre>
+        <script type="text/javascript">
+                var data = document.getElementById("fileData");
+                var conn = new WebSocket("ws://localhost:8080/ws");
+
+                conn.onclose = function(evt) {
+                    data.textContent = 'Connection closed';
+                }
+                conn.onmessage = function(evt) {
+                    console.log('file updated');
+                    data.textContent = evt.data;
+                }
+        </script>
+    </body>
+</html>

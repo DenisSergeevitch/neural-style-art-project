@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "net.franchu.neuralstyleartproject";
+
+message InputImage {
+    string title = 1;
+    ImageFormat format = 2;
+    bytes image = 3;
+}
+
+enum ImageFormat {
+    UNKNOWN = 0;
+    JPG = 1;
+    PNG = 2;
+}

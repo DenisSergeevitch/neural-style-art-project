@@ -1,5 +1,5 @@
 variable "count" {
-	default = 1
+	default = 11
 }
 
 variable "inbound_cidr" {

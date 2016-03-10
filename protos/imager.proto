@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "image.proto";
+
+option java_package = "net.franchu.neuralstyleartproject";
+
+service NeuralStyleImager {
+    rpc CreateJob (CreateJobRequest) returns (CreateJobResponse);
+    rpc CreateFullJob (CreateFullJobRequest) returns (CreateFullJobResponse);
+}
+
+message CreateJobRequest {
+    string name = 2;
+    InputImage content = 5;
+}
+
+message CreateJobResponse {
+
+}
+
+message CreateFullJobRequest {
+    string name = 2;
+    InputImage style = 3;
+    InputImage content = 5;
+}
+
+message CreateFullJobResponse {
+
+}
